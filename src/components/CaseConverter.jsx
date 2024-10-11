@@ -4,9 +4,11 @@ const CaseConverter = () => {
 
     const [text, setText] = useState('')
     const [alert, setAlert] = useState('')
+    const [alertCol, setAlertCol] = useState('green')
 
-    const emptyCheck = (msg) => {
-        setAlert('ALERT: Input box is empty')
+    const emptyCheck = () => {
+        setAlert('Please enter some text first!')
+        setAlertCol('red')
         setTimeout(() => {
             setAlert(null)
         }, 3000)
@@ -14,6 +16,7 @@ const CaseConverter = () => {
 
     const workDone = (msg) => {
         setAlert(msg)
+        setAlertCol('lime')
         setTimeout(() => {
             setAlert(null)
         }, 3000)
@@ -123,7 +126,7 @@ const CaseConverter = () => {
         <div id="caseCon-container" className='text-center h-[90vh] dark:bg-[#0d203a] dark:text-[#fff]'>
             <h2 className='text-2xl font-bold py-2'>Case Converter</h2>
             <div className='h-[30px] mb-2'>
-                {alert && <div style={{ color: 'red' }}>{alert}</div>}
+                {alert && <div style={{ color: alertCol}}>{alert}</div>}
             </div>
             <form onSubmit={handleSumbit} className='flex flex-col justify-center items-center'>
                 <textarea

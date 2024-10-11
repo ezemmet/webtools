@@ -5,8 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [],
+    extend: {
+      boxShadow: {
+        'blue-hover': '0 0 10px rgb(0, 4, 255), inset 0 0 10px rgb(25, 0, 255)',
+      },
+    },
+    plugins: [],
+  }
 }
-
