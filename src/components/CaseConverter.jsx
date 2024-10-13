@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const CaseConverter = ({ switchMode }) => {
+const CaseConverter = ({ switchMode, switchInnerColor }) => {
 
     const [text, setText] = useState('')
     const [alert, setAlert] = useState('')
@@ -127,7 +127,8 @@ const CaseConverter = ({ switchMode }) => {
             style={switchMode}
             id="caseCon-container" className='text-center h-[90vh] dark:bg-[#0d203a] dark:text-[#fff] pt-5'>
             <div
-                className='border-[#b6b6b6] border-2 mx-[15rem] rounded-lg'
+                style={switchInnerColor}
+                className='mx-[14rem] rounded-md dark:bg-[#1e3049] dark:text-[#fff]'
             >
                 <h2 className='text-2xl font-bold py-2'>Case Converter</h2>
                 <div
@@ -141,14 +142,14 @@ const CaseConverter = ({ switchMode }) => {
                         onChange={handleOnChange}
                         id="caseConText"
                         placeholder='Type text here...'
-                        className='w-[60vw] h-[45vh] dark:bg-[#0d203a] dark:text-[#fff] border-[#b6b6b6] border-2 px-6 py-4 outline-none rounded-lg font-semibold'></textarea>
+                        className='w-[64vw] h-[45vh] dark:bg-[#0d203a] dark:text-[#fff] px-6 py-4 outline-none rounded-md font-semibold'></textarea>
                     <div className='h-[30px] mt-2'>
                         {alert && <div style={{ color: alertCol, fontWeight: '600' }}>{alert}</div>}
                     </div>
                     <div className="button-container my-4">
                         <button
                             onClick={handleUpperCase}
-                            className='hover:shadow-green-hover border-2 text-green-500 font-bold border-green-500 ml-1 min-h-[40px] rounded-xl'>
+                            className='hover:shadow-blue-hover border-2 font-bold border-blue-700 text-blue-700 ml-1 min-h-[40px] rounded-md'>
                             <span
                                 className='px-3 py-1 text-sm'>
                                 UPPER CASE
@@ -156,7 +157,7 @@ const CaseConverter = ({ switchMode }) => {
                         </button>
                         <button
                             onClick={handleLowerCase}
-                            className='border border-[#b6b6b6] bg-[#334155] text-[#fff] ml-1 min-h-[40px] rounded-xl hover:bg-[#4c5c72] hover:text-white transition ease-in-out delay-75'>
+                            className='hover:shadow-blue-hover border-2 font-bold border-blue-700 text-blue-700 ml-1 min-h-[40px] rounded-md'>
                             <span
                                 className='px-3 py-1 text-sm'>
                                 lower case
@@ -164,7 +165,7 @@ const CaseConverter = ({ switchMode }) => {
                         </button>
                         <button
                             onClick={handleSentenceCase}
-                            className='border border-[#b6b6b6] bg-[#334155] text-[#fff] ml-1 min-h-[40px] rounded-xl hover:bg-[#4c5c72] hover:text-white transition ease-in-out delay-75'>
+                            className='hover:shadow-blue-hover border-2 font-bold border-blue-700 text-blue-700 ml-1 min-h-[40px] rounded-md'>
                             <span
                                 className='px-3 py-1 text-sm'>
                                 Sentence case
@@ -172,7 +173,7 @@ const CaseConverter = ({ switchMode }) => {
                         </button>
                         <button
                             onClick={handleCapatilizesCase}
-                            className='border border-[#b6b6b6] bg-[#334155] text-[#fff] ml-1 min-h-[40px] rounded-xl hover:bg-[#4c5c72] hover:text-white transition ease-in-out delay-75'>
+                            className='hover:shadow-blue-hover border-2 font-bold border-blue-700 text-blue-700 ml-1 min-h-[40px] rounded-md'>
                             <span
                                 className='px-3 py-1 text-sm'>
                                 Capatilized Case
@@ -180,7 +181,7 @@ const CaseConverter = ({ switchMode }) => {
                         </button>
                         <button
                             onClick={handleToggleCase}
-                            className='border border-[#b6b6b6] bg-[#334155] text-[#fff] ml-1 min-h-[40px] rounded-xl hover:bg-[#4c5c72] hover:text-white transition ease-in-out delay-75'>
+                            className='hover:shadow-blue-hover border-2 font-bold border-blue-700 text-blue-700 ml-1 min-h-[40px] rounded-md'>
                             <span
                                 className='px-3 py-1 text-sm'>
                                 tOgGlE CaSe
@@ -188,7 +189,7 @@ const CaseConverter = ({ switchMode }) => {
                         </button>
                         <button
                             onClick={handleRemoveSpaces}
-                            className='border border-[#b6b6b6] bg-[#334155] text-[#fff] ml-1 min-h-[40px] rounded-xl hover:bg-[#4c5c72] hover:text-white transition ease-in-out delay-75'>
+                            className='hover:shadow-blue-hover border-2 font-bold border-blue-700 text-blue-700 ml-1 min-h-[40px] rounded-md'>
                             <span
                                 className='px-3 py-1 text-sm'>
                                 Remove extra space
@@ -196,7 +197,7 @@ const CaseConverter = ({ switchMode }) => {
                         </button>
                         <button
                             onClick={handleClear}
-                            className='border border-[#b6b6b6] bg-[#334155] text-[#fff] ml-1 min-h-[40px] rounded-xl hover:bg-[#4c5c72] hover:text-white transition ease-in-out delay-75'>
+                            className='hover:shadow-blue-hover border-2 font-bold border-blue-700 text-blue-700 ml-1 min-h-[40px] rounded-md'>
                             <span
                                 className='px-3 py-1 text-sm'>
                                 Clear
@@ -204,7 +205,7 @@ const CaseConverter = ({ switchMode }) => {
                         </button>
                         <button
                             onClick={handleCopy}
-                            className='border border-[#b6b6b6] bg-[#334155] text-[#fff] ml-1 min-h-[40px] rounded-xl hover:bg-[#4c5c72] hover:text-white transition ease-in-out delay-75'>
+                            className='hover:shadow-blue-hover border-2 font-bold border-blue-700 text-blue-700 ml-1 min-h-[40px] rounded-md'>
                             <span
                                 className='px-3 py-1 text-sm'>
                                 Copy

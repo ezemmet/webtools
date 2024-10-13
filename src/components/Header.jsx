@@ -25,7 +25,7 @@ const Header = ({ handleMode, mode, switchMode }) => {
         <div className="header-theme">
           <button
             onClick={handleMode}
-            className="w-[70px] border-2 border-blue-700 blue hover:shadow-blue-hover font-bold rounded-lg px-4 py-1.5 text-blue-700">{mode}</button>
+            className="w-[70px] border-2 border-blue-700 blue hover:shadow-blue-hover font-bold rounded-md px-4 py-1.5 text-blue-700">{mode}</button>
         </div>
       </div>
     </div>
