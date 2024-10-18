@@ -1,4 +1,5 @@
-import { CaseConverter, Header, Footer } from "./Imports/import.component"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { CaseConverter, Header, Footer, TodoOne, TodoSecond } from "./Imports/import.component"
 import { useState } from "react"
 
 function App() {
@@ -21,14 +22,26 @@ function App() {
   }
   const switchInnerColor = {
     color: mode === 'Dark' ? '#fff' : 'black',
-    backgroundColor: mode === 'Dark' ? '#1e3049' : 'rgb(193 194 195)'
+    backgroundColor: mode === 'Dark' ? 'rgb(9 24 45)' : 'rgb(205 205 205)'
   }
 
   return (
     <>
-      <Header handleMode={handleMode} mode={mode} switchMode={switchMode} />
-      <CaseConverter mode={mode} switchMode={switchMode} switchInnerColor={switchInnerColor} />
-      <Footer switchMode={switchMode}/>
+      <BrowserRouter>
+        <Header handleMode={handleMode} mode={mode} switchMode={switchMode} />
+        <Routes>
+          <Route path="/" element={
+            <CaseConverter mode={mode} switchMode={switchMode} switchInnerColor={switchInnerColor} />
+          }></Route>
+          <Route path="/todoone" element={
+            <TodoOne />
+          }></Route>
+          <Route path="/todosecond" element={
+            <TodoSecond />
+          }></Route>
+        </Routes>
+        <Footer switchMode={switchMode} />
+      </BrowserRouter>
     </>
   )
 }

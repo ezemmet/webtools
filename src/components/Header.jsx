@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 const Header = ({ handleMode, mode, switchMode }) => {
 
   return (
@@ -11,14 +13,14 @@ const Header = ({ handleMode, mode, switchMode }) => {
         </div>
         <div className="header-menu">
           <ul className='flex'>
-            <li className='m-2 pl-1 pr-1 font-semibold'>
-              <a href="#">Case Convertor</a>
+            <li className='m-2 font-semibold'>
+              <NavLink to="/" className={({ isActive }) => `${isActive ? 'p-2 rounded-md border border-red-600 text-blue-600' : ''}`}>Case Convertor</NavLink>
             </li>
-            <li className='m-2 pl-1 pr-1 font-semibold'>
-              <a href="#">TODO</a>
+            <li className='m-2 font-semibold'>
+              <NavLink to="/todoone" className={({ isActive }) => `${isActive ? 'p-2 rounded-md border border-red-600 text-blue-600' : ''}`}>TODO</NavLink>
             </li>
-            <li className='m-2 pl-1 pr-1 font-semibold'>
-              <a href="#">TODO</a>
+            <li className='m-2 font-semibold'>
+              <NavLink to="/todosecond" className={({ isActive }) => `${isActive ? 'p-2 rounded-md border border-red-600 text-blue-600' : ''}`}>TODO</NavLink>
             </li>
           </ul>
         </div>

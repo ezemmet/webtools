@@ -16,7 +16,7 @@ const CaseConverter = ({ switchMode, switchInnerColor }) => {
 
     const workDone = (msg) => {
         setAlert(msg)
-        setAlertCol('lime')
+        setAlertCol('green')
         setTimeout(() => {
             setAlert(null)
         }, 3000)
@@ -144,7 +144,12 @@ const CaseConverter = ({ switchMode, switchInnerColor }) => {
                         placeholder='Type text here...'
                         className='w-[64vw] h-[45vh] dark:bg-[#0d203a] dark:text-[#fff] px-6 py-4 outline-none rounded-md font-semibold'></textarea>
                     <div className='h-[30px] mt-2'>
-                        {alert && <div style={{ color: alertCol, fontWeight: '600' }}>{alert}</div>}
+                        {alert && <div
+                            style={{ color: alertCol }}
+                            className='px-2 py-1 rounded-md font-semibold'
+                        >
+                            {alert}
+                        </div>}
                     </div>
                     <div className="button-container my-4">
                         <button
