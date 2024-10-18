@@ -34,13 +34,13 @@ function App() {
             <CaseConverter mode={mode} switchMode={switchMode} switchInnerColor={switchInnerColor} />
           }></Route>
           <Route path="/todoone" element={
-            <TodoOne />
+            <TodoOne switchMode={switchMode}/>
           }></Route>
           <Route path="/todosecond" element={
-            <TodoSecond />
+            <TodoSecond switchMode={switchMode}/>
           }></Route>
         </Routes>
-        <Footer switchMode={switchMode} />
+        <Footer switchMode={switchMode} switchInnerColor={switchInnerColor} />
       </BrowserRouter>
     </>
   )

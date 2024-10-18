@@ -14,13 +14,13 @@ const Header = ({ handleMode, mode, switchMode }) => {
         <div className="header-menu">
           <ul className='flex'>
             <li className='m-2 font-semibold'>
-              <NavLink to="/" className={({ isActive }) => `${isActive ? 'p-2 rounded-md border border-red-600 text-blue-600' : ''}`}>Case Convertor</NavLink>
+              <NavLink to="/" className={({ isActive }) => `${isActive ? 'border-b border-red-600 text-blue-600' : ''} px-2`}>Case Convertor</NavLink>
             </li>
             <li className='m-2 font-semibold'>
-              <NavLink to="/todoone" className={({ isActive }) => `${isActive ? 'p-2 rounded-md border border-red-600 text-blue-600' : ''}`}>TODO</NavLink>
+              <NavLink to="/todoone" className={({ isActive }) => `${isActive ? 'border-b border-red-600 text-blue-600' : ''} px-2`}>About</NavLink>
             </li>
             <li className='m-2 font-semibold'>
-              <NavLink to="/todosecond" className={({ isActive }) => `${isActive ? 'p-2 rounded-md border border-red-600 text-blue-600' : ''}`}>TODO</NavLink>
+              <NavLink to="/todosecond" className={({ isActive }) => `${isActive ? 'border-b border-red-600 text-blue-600' : ''} px-2`}>Contact Me</NavLink>
             </li>
           </ul>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TodoOne = () => {
+const TodoOne = ({switchMode}) => {
   return (
-    <div>
-      Iam first todo.
+    <div className='h-[76vh]' style={switchMode}>
+      Iam About
     </div>
   )
 }
