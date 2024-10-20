@@ -140,7 +140,6 @@ const CaseConverter = ({ switchMode, switchInnerColor }) => {
                         style={switchMode}
                         value={text}
                         onChange={handleOnChange}
-                        id="caseConText"
                         placeholder='Type text here...'
                         className='w-[64vw] h-[45vh] dark:bg-[#0d203a] dark:text-[#fff] px-6 py-4 outline-none rounded-md font-semibold'></textarea>
                     <div className='h-[30px] mt-2'>

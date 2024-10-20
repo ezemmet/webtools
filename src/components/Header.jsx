@@ -17,10 +17,10 @@ const Header = ({ handleMode, mode, switchMode }) => {
               <NavLink to="/" className={({ isActive }) => `${isActive ? 'border-b border-red-600 text-blue-600' : ''} px-2`}>Case Convertor</NavLink>
             </li>
             <li className='m-2 font-semibold'>
-              <NavLink to="/todoone" className={({ isActive }) => `${isActive ? 'border-b border-red-600 text-blue-600' : ''} px-2`}>About</NavLink>
+              <NavLink to="/about" className={({ isActive }) => `${isActive ? 'border-b border-red-600 text-blue-600' : ''} px-2`}>About</NavLink>
             </li>
             <li className='m-2 font-semibold'>
-              <NavLink to="/todosecond" className={({ isActive }) => `${isActive ? 'border-b border-red-600 text-blue-600' : ''} px-2`}>Contact Me</NavLink>
+              <NavLink to="/contact" className={({ isActive }) => `${isActive ? 'border-b border-red-600 text-blue-600' : ''} px-2`}>Contact</NavLink>
             </li>
           </ul>
         </div>

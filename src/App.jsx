@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { CaseConverter, Header, Footer, TodoOne, TodoSecond } from "./Imports/import.component"
+import { CaseConverter, Header, Footer, About, Contact } from "./Imports/import.component"
 import { useState } from "react"
 
 function App() {
@@ -33,11 +33,11 @@ function App() {
           <Route path="/" element={
             <CaseConverter mode={mode} switchMode={switchMode} switchInnerColor={switchInnerColor} />
           }></Route>
-          <Route path="/todoone" element={
-            <TodoOne switchMode={switchMode}/>
+          <Route path="/about" element={
+            <About switchMode={switchMode} switchInnerColor={switchInnerColor}/>
           }></Route>
-          <Route path="/todosecond" element={
-            <TodoSecond switchMode={switchMode}/>
+          <Route path="/contact" element={
+            <Contact switchMode={switchMode} switchInnerColor={switchInnerColor}/>
           }></Route>
         </Routes>
         <Footer switchMode={switchMode} switchInnerColor={switchInnerColor} />
