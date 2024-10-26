@@ -25,10 +25,12 @@ function App() {
     backgroundColor: mode === 'Dark' ? 'rgb(9 24 45)' : 'rgb(205 205 205)'
   }
 
+  // FOR SMALL DEVICES BARS
+
   return (
     <>
       <BrowserRouter>
-        <Header handleMode={handleMode} mode={mode} switchMode={switchMode} />
+        <Header handleMode={handleMode} mode={mode} switchMode={switchMode}/>
         <Routes>
           <Route path="/" element={
             <CaseConverter mode={mode} switchMode={switchMode} switchInnerColor={switchInnerColor} />
