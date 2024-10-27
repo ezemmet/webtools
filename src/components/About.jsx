@@ -4,20 +4,20 @@ import TeamImage from '../Image/teambgimg.jpg'
 
 const About = ({ switchMode, switchInnerColor }) => {
   return (
-    <div className='h-[120vh] px-5 py-4 flex' style={switchMode}>
+    <div className='lg:h-[130vh] lg:px-5 lg:py-4 grid lg:grid-cols-12' style={switchMode}>
       <div
         style={switchInnerColor}
-        className='rounded-md p-10 w-[60%]'>
+        className='rounded-md p-10 lg:col-span-7'>
         <h2 className='text-4xl font-semibold'>About</h2>
         <p className='mt-5'><span>Welcome to <Link className='border-b border-gray-400 text-blue-600'>EZ Case Converter</Link>, your go-to tool for transforming text effortlessly! Whether you need to convert text to uppercase, lowercase, title case, or any other format, our user-friendly web application simplifies the process.</span></p>
         <p className='mt-5'><span>Designed with simplicity in mind, EZ Case Converter allows users to quickly input their text and choose from a variety of case styles. Perfect for writers, students, and professionals, our tool ensures that your text is always presented in the format you need.</span></p>
         <p className='mt-5'><span>No downloads, no complicated settings—just straightforward functionality at your fingertips. Try Easy Case Converter today and make text transformation a breeze!</span></p>
-        <div className='flex mt-8'>
-          <div className='w-[35%]'>
-            <img src={TeamImage} alt="Team" className='h-[300px] rounded-sm' />
-            <p className='text-center'>Team EZ Case Converter</p>
+        <div className='grid lg:grid-cols-2 mt-8'>
+          <div>
+            <img src={TeamImage} alt="Team" className='hidden lg:block h-[300px] rounded-sm' />
+            <p className='hidden lg:block text-center'>Team EZ Case Converter</p>
           </div>
-          <div className='ml-6 w-[65%]'>
+          <div className='lg:ml-6'>
             <p><span>At <Link className='border-b border-gray-400 text-blue-600'>EZ Case Converter</Link>, your privacy and data security are our top priorities. We are committed to ensuring that your information remains confidential and protected while you use our services. We genuinely value your feedback, as it helps us improve and enhance your experience.</span></p>
             <p className='mt-6'><span>Thank you for visiting EZ Case Converter—we appreciate your support!</span></p>
           </div>
@@ -26,7 +26,7 @@ const About = ({ switchMode, switchInnerColor }) => {
 
       <div
         style={switchInnerColor}
-        className='ml-7 w-[40%] p-10 rounded-md'>
+        className='mt-2 lg:ml-7 lg:mt-0 p-10 rounded-md lg:col-span-5'>
         <h2 className='text-4xl font-semibold'>About Buttons</h2>
         <div>
           <h3 className='font-semibold text-xl mt-4'>Uppercase</h3>

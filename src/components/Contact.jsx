@@ -9,10 +9,10 @@ const Contact = ({ switchMode, switchInnerColor }) => {
   return (
     <div
       style={switchMode}
-      className='h-[90vh] px-5 py-4 flex'>
+      className='lg:h-[100vh] lg:px-5 lg:py-4 grid lg:grid-cols-12'>
       <div
         style={switchInnerColor}
-        className='rounded-md p-10'>
+        className='rounded-md p-10 lg:col-span-8'>
         <h2 className='text-4xl font-semibold'>Contact</h2>
         <p className='mt-3'><span className='text-sm'>For questions, comments, and suggestions for how this site can serve you better, please contact us using the form below. Thank you!</span></p>
         <form onSubmit={handleSumbit}>
@@ -52,7 +52,7 @@ const Contact = ({ switchMode, switchInnerColor }) => {
       </div>
       <div
         style={switchInnerColor}
-        className='ml-7 w-[30vw] rounded-md'>
+        className='hidden lg:block ml-7 rounded-md lg:col-span-4'>
         other
       </div>
     </div>

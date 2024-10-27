@@ -8,7 +8,7 @@ const Footer = ({ switchMode, switchInnerColor }) => {
         <div
             id='footer-container'
             style={switchMode}
-            className='h-[6rem] border-t-2 border-red-600 flex items-center justify-evenly flex-col'
+            className='h-[10rem] p-2 md:h-[6rem] border-t-2 border-red-600 flex items-center justify-evenly flex-col'
         >
             <div className='text-center text-sm'>
                 <p><span>Copyright © 2024-2025 Ez Case Converter | All Rights Reserved | Project by              <Link to='/'
