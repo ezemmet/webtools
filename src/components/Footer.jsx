@@ -20,15 +20,15 @@ const Footer = ({ switchMode, switchInnerColor }) => {
                 <ul className='flex p-2 rounded-lg' style={switchInnerColor}>
                     <li className='flex items-center cursor-pointer px-1 border-b border-red-600 mx-2'>
                         <FontAwesomeIcon icon={faGithub} className='mr-1 text-lg' />
-                        <Link to='https://github.com/ezemmet' className=' text-blue-600 font-semibold'>Github</Link>
+                        <Link to='https://github.com/ezemmet' target='_blank' className=' text-blue-600 font-semibold'>Github</Link>
                     </li>
                     <li className='flex items-center cursor-pointer px-1 border-b border-red-600 mx-2'>
                         <FontAwesomeIcon icon={faLinkedin} className='mr-1 text-lg' />
-                        <Link to='https://www.linkedin.com/in/nitin-sharma-910742278/' className='text-blue-600 font-semibold'>Linkdin</Link>
+                        <Link to='https://www.linkedin.com/in/nitin-sharma-910742278/' target='_blank' className='text-blue-600 font-semibold'>Linkdin</Link>
                     </li>
                     <li className='flex items-center cursor-pointer px-1 border-b border-red-600 mx-2'>
                         <FontAwesomeIcon icon={faInstagram} className='mr-1 text-lg' />
-                        <Link to='https://www.instagram.com/ezemmet.ind/' className='text-blue-600 font-semibold'>Instagram</Link>
+                        <Link to='https://www.instagram.com/ezemmet.ind/' target='_blank' className='text-blue-600 font-semibold'>Instagram</Link>
                     </li>
                 </ul>
             </div>
